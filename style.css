@@ -105,3 +105,49 @@ hr {
 	bottom: 8px; 
     left: 8px;
 }
+/**
+ * Editor styles
+ */
+ bodycopy {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	line-height: 1.5;
+    letter-spacing: 0.05rem;
+}
+
+bodycopy a {
+	color: rgba(0, 0, 0, 0.85);
+	padding-bottom: 0.1em;
+	border-bottom: 0.0em solid rgba(127, 127, 127, 0.2);
+	text-decoration: none;
+}
+
+bodycopy a:hover {
+	background: transparent;
+	}
+
+	bodycopy a.image-link,
+	bodycopy a.icon-link,
+	bodycopy a.image-link:hover,
+	bodycopy a.icon-link:hover {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	h1 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		padding: 0;
+		margin: 0;
+		font-size: 6rem;
+		line-height: 1;
+		color: rgb(0, 255, 38);
+		}
+	
+	h1 a {
+			color: rgb(0, 0, 0);
+		}
