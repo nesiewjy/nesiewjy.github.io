@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     var quill = new Quill('#editor-container', {
         theme: 'snow',
-        readOnly: true,
+        readOnly: false,
         modules: {
-            toolbar: false
+            toolbar: true
         }
     });
 
