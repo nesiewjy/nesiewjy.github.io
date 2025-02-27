@@ -3,14 +3,14 @@ body {
     background-color: #FEFBFA;
     color: #5E5E5E;
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5rem;
+    margin-right: 5rem;
     padding: 1.6rem;
+    font-size: 0.75rem;
 }
 
 h1 {
-    font-size: 1.5rem;
-    font-style: italic;
+    font-size: 1 rem;
     text-align: left;
 }
 
@@ -28,16 +28,32 @@ a {
     text-decoration: none;
 }
 
+.url {
+    border-bottom: 3px solid rgba(255, 249, 189, 1);
+}
+
 a:active {
     opacity: 0.7;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 a:hover {
     text-shadow: 0 0 10px rgba(255, 249, 189, 0.79), 0px 0 5px #fff9bd, 0 5px 5px #fff9bd;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .page a.active {
     color: #fbfdd1;
+}
+
+.line{
+    width: 112px;
+    border-bottom: .5px solid rgb(86, 86, 86);
+    position: absolute;
+    }
+
+.text-body {
+    padding: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.0;
 }
