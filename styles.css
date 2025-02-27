@@ -57,4 +57,16 @@ a:hover {
     font-size: 1rem;
     line-height: 1.5;
     width: 60%;
+    margin: 0 auto; /* Centering */
+    max-width: 100%; /* Ensures it never overflows */
 }
+
+/* 🔹 Ensure full width on mobile devices */
+@media (max-width: 1080px) {
+    .text-body {
+        width: 100%;  /* Forces full width */
+        padding: 1 rem; /* Adjust padding for better spacing */
+    }
+}
+
+
