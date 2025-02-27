@@ -61,12 +61,40 @@ a:hover {
     max-width: 100%; /* Ensures it never overflows */
 }
 
-/* 🔹 Ensure full width on mobile devices */
 @media (max-width: 1080px) {
+    body {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding: 1.4rem;
+    }
     .text-body {
-        width: 100%;  /* Forces full width */
-        padding: 1 rem; /* Adjust padding for better spacing */
+        width: 80%;
+        padding: 1.5rem;
     }
 }
 
+/* 🔹 If screen width is less than 900px (tablet), reduce margins and make text-body wider */
+@media (max-width: 900px) {
+    body {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding: 1.2rem;
+    }
+    .text-body {
+        width: 90%;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+    }
+    .text-body {
+        width: 100%;
+        padding: 1rem;
+    }
+}
 
