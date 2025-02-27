@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveGitHubButton.innerText = "Save to GitHub";
         saveGitHubButton.style.marginTop = "10px";
         saveGitHubButton.onclick = function () {
-            var textToSave = quill.root.innerHTML;
+            var fullHtml = document.documentElement.outerHTML;;
             saveToGitHub(dateKey, textToSave);
         };
         editorContainer.parentNode.appendChild(saveGitHubButton);
