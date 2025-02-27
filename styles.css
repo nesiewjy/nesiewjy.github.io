@@ -55,6 +55,6 @@ a:hover {
 .text-body {
     padding: 1.8rem;
     font-size: 1rem;
-    line-height: 1.0;
-    width: fit-content;
+    line-height: 1.1;
+    width: 60%;
 }
