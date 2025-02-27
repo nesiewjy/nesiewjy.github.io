@@ -56,13 +56,5 @@ a:hover {
     padding: 1.8rem;
     font-size: 1rem;
     line-height: 1.0;
-}
-.ql-editor {
-    font-size: 1rem !important;  /* Ensures Quill editor text matches */
-    line-height: 1.5 !important;
-    font-family: 'Zen Kaku Gothic New', sans-serif !important;
-    color: #5E5E5E !important;
-    padding: 1.8rem !important;
-    background-color: transparent !important;
-    border: none !important; /* Removes default border */
+    width: fit-content;
 }
