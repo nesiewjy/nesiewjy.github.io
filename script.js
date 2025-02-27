@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveGitHubButton.innerText = "Save to GitHub";
         saveGitHubButton.style.marginTop = "10px";
         saveGitHubButton.onclick = function () {
-            var textToSave = quill.root.innerHTML;
+            var textToSave = quill.root.innerHTML;  // ✅ Ensures text is defined
             saveToGitHub(dateKey, textToSave);
         };
         editorContainer.parentNode.appendChild(saveGitHubButton);
@@ -50,7 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Editor container not found. Make sure #editor-container exists in your HTML.");
     }
 
-    // GitHub API function to commit and push the file
+    // ✅ Replacing deprecated `DOMNodeInserted` with `MutationObserver`
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.addedNodes.length) {
+                console.log("New node added:", mutation.addedNodes);
+            }
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // ✅ GitHub API function to commit and push the file
     function saveToGitHub(filename, content) {
         var githubUsername = "nesiewjy"; // Replace with your GitHub username
         var repoName = "nesiewjy.github.io"; // Replace with your GitHub repo name
@@ -64,7 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(apiUrl, {
             headers: { Authorization: `token ${githubToken}` }
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("File does not exist, creating a new one.");
+            }
+            return response.json();
+        })
         .then(data => {
             var sha = data.sha || null; // Get existing file SHA if available
 
@@ -76,7 +92,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 sha: sha // Include SHA if updating an existing file
             };
 
-            // Commit the file to GitHub
+            return fetch(apiUrl, {
+                method: "PUT",
+                headers: {
+                    Authorization: `token ${githubToken}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.commit) {
+                alert("Diary entry saved to GitHub successfully!");
+            } else {
+                alert("Error saving to GitHub: " + JSON.stringify(data));
+            }
+        })
+        .catch(error => {
+            console.log("File does not exist, creating new.");
+            var payload = {
+                message: `Created diary entry ${filename}`,
+                content: btoa(unescape(encodeURIComponent(content))), // Convert text to Base64
+                branch: branch
+            };
+
             fetch(apiUrl, {
                 method: "PUT",
                 headers: {
@@ -96,9 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => {
                 alert("Error: " + error);
             });
-        })
-        .catch(error => {
-            alert("Error retrieving file from GitHub. Check if the file exists.");
         });
     }
 });
