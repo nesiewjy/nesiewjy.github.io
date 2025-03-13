@@ -8,6 +8,7 @@ function setup() {
 function generatePattern() {
     clear();
     noFill();
+    background(255, 0);
     stroke("#FFF9BD"); // Yellow lines
 
     circles = []; // Reset circles
