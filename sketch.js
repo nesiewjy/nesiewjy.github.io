@@ -6,10 +6,9 @@ function setup() {
 }
 
 function generatePattern() {
-    clear();
-    noFill();
-    background(255, 0);
-    stroke("#FFF9BD"); // Yellow lines
+  background("#C1C1C1"); 
+  noFill();
+  stroke("#FFF9BD"); // Yellow lines
 
     circles = []; // Reset circles
     let numPatterns = 50; 
