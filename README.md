@@ -1,2 +1,12 @@
-# nesiewjy.github.io
-# All rights reserved for Nesie Junyi Wang 
+ .-----------------------------------------.
+( All rights reserved for Nesie Junyi Wang  )    ..
+ `-----------------------------------------
+        '   .' /
+      O    /  ;
+        o i  OO
+         C    `-.
+         |    <-'
+         (  ,--.
+          V  \_)
+           \  :
+            `._\.
