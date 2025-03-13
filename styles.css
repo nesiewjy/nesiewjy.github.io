@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    background-color: #c1c1c1;
+    background-color: #e3e3e3;
     color: #5E5E5E;
     text-align: left;
     margin: 5rem; /* Consistent margin */
@@ -98,6 +98,7 @@ a:hover {
 body.front-page {
     overflow: hidden;
     height: 100vh;
+    background-color: #c1c1c1;
 }
 
 /* 🔹 Background Canvas for p5.js */
