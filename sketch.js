@@ -8,9 +8,9 @@ function setup() {
 function generatePattern() {
   background("#C1C1C1"); 
   noFill();
-  stroke("#FFF9BD"); // Yellow lines
+  stroke("#FFF9BD"); 
 
-    circles = []; // Reset circles
+    circles = []; 
     let numPatterns = 50; 
     let emptyZone = width * 0.2; 
 
