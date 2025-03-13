@@ -2,10 +2,15 @@ let circles = [];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    generatePattern();
+}
+
+function generatePattern() {
     clear();
     noFill();
     stroke("#FFF9BD"); // Yellow lines
 
+    circles = []; // Reset circles
     let numPatterns = 50; 
     let emptyZone = width * 0.2; 
 
@@ -62,11 +67,10 @@ function drawRandomGrid(emptyZone) {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    redraw();
+    generatePattern();
 }
 
+// Click to regenerate pattern
 function mousePressed() {
-    circles = [];
-    clear();
-    redraw();
+    generatePattern();
 }
