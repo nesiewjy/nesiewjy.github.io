@@ -61,31 +61,9 @@ a:hover {
     max-width: 100%; /* Ensures it never overflows */
 }
 
-@media (max-width: 1080px) {
-    body {
-        margin-left: 3rem;
-        margin-right: 3rem;
-        padding: 1.4rem;
-    }
-    .text-body {
-        width: 80%;
-        padding: 1.5rem;
-    }
-}
 
 /* 🔹 If screen width is less than 900px (tablet), reduce margins and make text-body wider */
 @media (max-width: 900px) {
-    body {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding: 1rem;
-    }
-    .text-body {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
     body {
         margin-left: .5rem;
         margin-right: .5rem;
@@ -95,6 +73,7 @@ a:hover {
         padding: .5rem;
     }
 }
+
 
 body {
     font-family: 'Zen Kaku Gothic New', sans-serif;
