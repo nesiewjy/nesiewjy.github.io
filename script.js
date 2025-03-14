@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let prevBtn = document.getElementById("prevBtn");
             let nextBtn = document.getElementById("nextBtn");
+            let backBtn = document.getElementById("backBtn");
 
             if (currentIndex !== -1) {
                 if (currentIndex > 0) {
@@ -42,6 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 prevBtn.style.display = "none";
                 nextBtn.style.display = "none";
             }
+                        // Back button functionality
+                        if (backBtn) {
+                            backBtn.onclick = () => (window.location.href = "../index.html");
+                        }
         })
+        
         .catch(error => console.error("❌ Error fetching entries:", error));
 });
