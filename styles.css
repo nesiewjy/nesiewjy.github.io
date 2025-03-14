@@ -32,7 +32,7 @@ a {
 }
 
 .url {
-    border-bottom: 3px solid rgba(255, 249, 189, 1);
+    border-bottom: 3px solid #fff9bd;
 }
 
 a:active {
@@ -108,4 +108,31 @@ canvas {
     left: 0;
     z-index: -1;
     pointer-events: none;
+}
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #5E5E5E;
+    padding: 0rem 0rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    text-shadow: 0 0 10px rgba(255, 249, 189, 0.79), 
+                 0px 0 5px #fff9bd, 
+                 0 5px 5px #fff9bd;
+}
+
+.nav-button:disabled {
+    opacity: 0;
+    cursor: not-allowed;
 }
