@@ -142,7 +142,7 @@ canvas {
 .image-link {
     position: fixed;
 
-    left: 6vw;
+    right: 6vw;
 
     z-index: 10;
 }
