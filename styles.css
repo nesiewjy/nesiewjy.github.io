@@ -171,9 +171,9 @@ canvas {
     }
 
     .image-link img {
-        width: 28vw;
+        width: 25vw;
         min-width: 90px;
-        max-width: 140px;
+        max-width: 110px;
     }
 
 }
