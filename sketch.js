@@ -6,9 +6,9 @@ function setup() {
 }
 
 function generatePattern() {
-  background("#C1C1C1"); 
+  drawGradientBackground();  
   noFill();
-  stroke("#FFF9BD"); 
+  stroke("#805b10"); 
 
     circles = []; 
     let numPatterns = 50; 
@@ -73,4 +73,16 @@ function windowResized() {
 // Click to regenerate pattern
 function mousePressed() {
     generatePattern();
+}
+
+function drawGradientBackground() {
+    let topColor = color("#C1C1C1");
+    let bottomColor = color("#b7b7a4");
+
+    for (let y = 0; y < height; y++) {
+        let inter = map(y, 0, height, 0, 1);
+        let c = lerpColor(topColor, bottomColor, inter);
+        stroke(c);
+        line(0, y, width, y);
+    }
 }
