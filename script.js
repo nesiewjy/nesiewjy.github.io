@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
                         // Back button functionality
                         if (backBtn) {
-                            backBtn.onclick = () => (window.location.href = "../index.html");
+                            backBtn.onclick = () => (window.location.href = "/");
                         }
         })
         
