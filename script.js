@@ -64,8 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("✅ Entries loaded:", data.entries);
 
             let entryFiles = data.entries;
-            let currentPage = window.location.pathname.split("/").pop();
-            let currentEntry = "entries/" + currentPage;
+           let currentEntry = window.location.pathname
+              .replace(/^\/+/, '')  // remove leading slash
+               .replace(/\/+$/, ''); 
             let currentIndex = entryFiles.indexOf(currentEntry);
 
             let prevBtn = document.getElementById("prevBtn");
@@ -76,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentIndex > 0) {
                     prevBtn.onclick = () => {
                         console.log("⬅ Navigating to:", entryFiles[currentIndex - 1]);
-                        window.location.href = "/" + entryFiles[currentIndex - 1];
+                        window.location.href = "/" + entryFiles[currentIndex - 1]+ "/";
                     };
+                    
                 } else {
                     prevBtn.disabled = true;
                 }
@@ -85,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentIndex < entryFiles.length - 1) {
                     nextBtn.onclick = () => {
                         console.log("➡ Navigating to:", entryFiles[currentIndex + 1]);
-                        window.location.href = "/" + entryFiles[currentIndex + 1];
+                        window.location.href = "/" + entryFiles[currentIndex + 1]+ "/";
                     };
                 } else {
                     nextBtn.disabled = true;
