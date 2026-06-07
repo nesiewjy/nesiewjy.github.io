@@ -163,6 +163,7 @@ canvas {
     cursor: not-allowed;
 }
 
+/*clickable image
 .image-link {
     position: fixed;
     right: 6vw;
@@ -187,6 +188,7 @@ canvas {
     transform: scale(1.03);
     opacity: 1;
 }
+*/
 
 /* mobile */
 @media (max-width: 768px) {
