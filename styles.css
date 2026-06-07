@@ -58,16 +58,19 @@ a {
     text-decoration: none;
 }
 
-.url {
+.url,
+.bio-toggle {
     border-bottom: 3px solid #fff9bd;
 }
 
-a:active {
+a:active, 
+.bio-toggle:active {
     opacity: 0.7;
     font-weight: 600;
 }
 
-a:hover {
+a:hover, 
+.bio-toggle:hover {
     text-shadow: 0 0 10px rgba(255, 249, 189, 0.79), 
                  0px 0 5px #fff9bd, 
                  0 5px 5px #fff9bd;
@@ -208,4 +211,19 @@ canvas {
         max-width: 130px;
     }
 
+}
+
+.bio-toggle {
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+    color: inherit;
+
+    cursor: pointer;
 }

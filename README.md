@@ -1,5 +1,5 @@
  .-----------------------------.
-( site for some personal words  )    ..
+( site for burrowing  )    ..
  `-----------------------------
         '   .' /
       O    /  ;

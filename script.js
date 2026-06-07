@@ -131,7 +131,6 @@ if (btn && bio && words) {
         bio.hidden = open;
         words.hidden = !open;
 
-        btn.textContent = open ? '▾' : '▴';
         btn.setAttribute('aria-expanded', !open);
     });
 }
