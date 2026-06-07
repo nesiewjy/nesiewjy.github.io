@@ -42,15 +42,6 @@ h1 {
   margin-right: 0.1em;
 }
 
-/* Entry list */
-ul.entries {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul.entries li {
-    margin-bottom: 0.8rem;
-}
 
 /* Links */
 a {

@@ -8,7 +8,7 @@ function setup() {
 function generatePattern() {
   drawGradientBackground();  
   noFill();
-  stroke("#805b10"); 
+  stroke("#805b1092"); 
 
     circles = []; 
     let numPatterns = 50; 
